@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet"  href="../css/usert.css"/>
+		<link rel="shortcut icon"  href="../favicon.ico"/>
+		<title>哔哩哔哩漫画 - bilibili 正版漫画平台</title>
+		<style>
+			a{
+				text-decoration: none;
+			}
+			ul{
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+			li{
+				list-style-type: none;
+			}
+			.head1{
+				float: none;
+			}
+			.shuffling-nav{
+				width: 1267px;
+				height: 457px;
+			}
+			.shuffling{
+				height: 380px;
+				overflow: hidden;
+				position: relative;
+			}
+			.shuffling ul{
+				width: 5320px;
+				height: 100%;
+				position: absolute;
+				left: -2026px;
+				transition: 1s;
+			}
+			.shuffling li{
+				width: 760px;
+				height: 100%;
+				float: left;
+			}
+
+			.shadow-l, .shadow-r{
+				width: 254px;
+				height: 380px;
+				
+				background-color: rgba(0,0,0,.7);
+				position: absolute;
+				z-index: 2;
+				
+			}
+			.shadow-r{
+				right: 0;
+			}
+			.shadow-l div, .shadow-r div{
+				width: 50px;
+				height: 100px;
+				color: white;
+				font-size: 30px;
+				font-weight: 500;
+				position: absolute;
+				left: 100px;
+				top: 130px;
+				cursor: pointer;
+				text-align: center;
+				line-height: 100px;
+				background: rgba(0,0,0,.4);
+			}
+			.nav{
+				height: 70px;
+				background: #212121;
+			}
+			.nav ul{
+				padding-left: 75px;
+				width: 100%;
+				height: 100%;
+			}
+			.nav ul li{
+				width: 70px;
+				height: 100%;
+				float: left;
+				color: white;
+				margin-right: 5px;
+				line-height: 70px;
+			}
+			.recomand{
+				width: 1050px;
+				height: 610px;
+			}
+			.recomand-l{
+				width: 743px;
+				height: 100%;
+				float: left;
+				overflow: hidden;
+			}
+			.recomand-r{
+				width: 277px;
+				height: 100%;
+				float: left;
+				margin-left: 30px;
+			}
+			.recomand-l-t , .recomand-r-t{
+				width: 100%;
+				height: 50px;
+				font-size: 28px;
+				font-weight: 300;
+				line-height: 50px;
+				position: relative;
+			}
+			.recomand-r-t span{
+				display: inline-block;
+				font-size: 15px;
+				color: #C7C7C7;
+				position: absolute;
+				right: 0;
+			}
+			.recomand-l-b ul{
+				width: 110%;
+				height: 560px;
+				margin-top: 10px;
+			}
+			.recomand-l-b ul li{
+				width: 140px;
+				height: 45%;
+				float: left;
+				margin-right: 11px;
+			}
+			.recomand-l-b ul li i{
+				display: inline-block;
+				width: 140px;
+				height: 190px;
+				
+			}
+			.recomand-l-b ul li p{
+				font-weight: 500;
+				font-size: 15px;
+				margin: 0;
+				color: #272727;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				white-space:nowrap
+			}
+			
+			.recomand-l-b  li span{
+				font-size: 12px;
+				color: #A7A7C7;
+			}
+			
+			
+			
+			
+			.recomand-r-b ul {
+				width: 100%;
+				height: 560px;
+				margin-top: 10px;
+			}
+			
+			.recomand-r-b ul li{
+				width: 100%;
+				height: 40px;
+			}
+			.recomand-r-b  li:nth-child(2n), .recomand-r-b li:nth-child(2n+1){
+				line-height: 40px;
+			}
+			.recomand-r-b ul li:first-child{
+				height: 169px;
+				line-height: 20px;
+			}
+			.recomand-r-b img, .recomand-r-b div, .recomand-r-b span{
+				float: left;
+			}
+			.recomand-r-b div{
+				width: 83px;
+				height: 100%;
+				margin-left: 10px;
+				font-size: 20px;
+			}
+			.recomand-r-b div p{
+				font-size: 12px;
+				color: #A7A7A7;
+				margin: 0;
+			}
+			.recomand-r-b div p:first-child{
+				margin-top: 95px;
+			}
+			.recomand-r-b ul li:first-child span{
+				color: #CF9870;
+				margin: 135px 0 0 15px;
+				font-size: 60px;
+				font-weight: 1000;
+			}
+			.recomand-r-b li  span{
+				color: #A7A7A7;
+				margin-right: 20px;
+			}
+			.recomand-r-b li:last-child  span{
+				margin-right: 11px;
+			}
+			.recomand-r-b li:nth-child(2)  span, .recomand-r-b li:nth-child(3)  span{
+				color: #CF9870;
+				font-size: 18px;
+				font-weight: 500;
+			}
+			.recomand-r-b li i{
+				font-style: normal;
+				float: right;
+				color: #A7A7A7;
+				font-size: 13px;
+			}
+			.upt{
+				width: 1050px;
+				height: 463px;
+			}
+			
+			.upt-t{
+				width: 100%;
+				height: 50px;
+				font-size: 32px;
+				position: relative;
+			}
+			.upt-t ul{
+				width: 600px;
+				height: 100%;
+				padding: 0;
+				position: absolute;
+				left: 130px;
+				top: 18px;
+			}
+			.upt-t ul li{
+				width: 50px;
+				height: 100%;
+				font-size: 16px;
+				float: left;
+				color: #7F7F7F;
+				margin-right: 20px;
+			}
+			.upt-t ul li:first-child{
+				color: #32AAFF;
+			}
+			.upt-b ul {
+				width: 110%;
+				height: 446px;
+			}
+			.upt-b ul li{
+				width: 240px;
+				height: 184px;
+				float: left;
+				margin: 20px 30px 0 0;
+			}
+			.upt-b ul li i{
+				display: inline-block;
+				width: 240px;
+				height: 134px;
+				border-radius: 1px;
+				
+				background-size: 100% 100%;
+			}
+			.upt-b ul li p{
+				font-size: 14px;
+				margin: 0;
+			}
+			.upt-b ul li span{
+				font-size: 12px;
+				color: #999999;
+			}
+			.footer{
+				width: 1280px;
+				height: 273px;
+				background: #212121;
+				overflow: hidden;
+			}
+			.footer-t{
+				width: 1000px;
+				height: 140px;
+				margin: 10px auto ;
+			}
+			.footer-t div{
+				float: left;
+				margin-top: 35px;
+			}
+			.footer-t div:first-child{
+				width: 240px;
+				position: relative;
+			}
+			.footer-t div:first-child span{
+				display: inline-block;
+				width: 160px;
+				color: #828282;
+				font-size: 24px;
+				top: 15px;
+				margin-left: 20px;
+				position: absolute;
+			}
+			
+			.footer-t div:nth-child(2) ul{
+				width: 260px;
+				height: 84px;
+				margin-left: 80px;
+			}
+			.footer-t div:nth-child(2) ul li{
+				width: 50%;
+				height: 40%;
+				color: #B9B9B2;
+				float: left;
+			}
+			.footer-t div:last-child{
+				padding-left: 30px;
+				border-left: 1px solid #4D4D4D;
+			}
+			.footer-t div:last-child li{
+				list-style-type: none;
+				margin-left: 40px;
+				float: left;
+			}
+			.footer-t div:last-child li:first-child{
+				margin-left: 0;
+			}
+			.footer-t div:last-child li:nth-child(2){
+				margin-left: 60px;
+			}
+			.footer-t div:last-child span{
+				display: block;
+				text-align: center;
+				font-size: 13px;
+				color: #899090;
+				margin-top: 10px;
+			}
+			.footer-t div:last-child  img{
+				display: block;
+			}
+			.footer-t div:last-child li:last-child img{
+				margin-left: 30px;
+			}
+			.footer-b{
+				width: 1000px;
+				height: 100px;
+				margin: 10px auto;
+			}
+			.footer-b li{
+				float: left;
+			}
+			.footer-b li:first-child{
+				width: 100px;
+				height: 30px;
+				background-image: url("../img/partner.png");
+				background-position: 0 0;
+				background-repeat: no-repeat;
+			}
+			.footer-b li:nth-child(2){
+				width: 100px;
+				height: 30px;
+				background-image: url("../img/partner.png");
+				background-position: 0 -40px;
+				background-repeat: no-repeat;
+			}
+			.footer-b li:first-child, .footer-b li:nth-child(2){
+				margin: 30px 20px 0 0;
+				
+			}
+			.footer-b li:last-child{
+				width: 750px;
+				margin-top: 10px;
+				color: #899090;
+			}
+			.footer-b p{
+				margin: 5px 0;
+				font-size: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="head1">
+				<div class="else">
+				    <ul>
+				      <li><img src="../favicon.ico" alt="ss" width="20px" height="20px"><a href="../index.html">主站</a><div>
+				        <dl>
+				          <dd>123</dd>
+				        </dl>
+							  </div></li>
+							  
+				      <li><a href="game_center.html">游戏中心</a><div>
+				        <dl>
+				          <dd>123</dd>
+				        </dl></div></li>
+							  
+				      <li>直播<div>
+				        <dl>
+				          <dd>123</dd>
+				        </dl></div></li>
+							  
+				      <li>会员购<div>
+				        <dl>
+				          <dd>123</dd>
+				        </dl></div></li>
+							  
+				      <li><a href="comic.html">漫画</a><div>
+				        <dl>
+				          <dd>123</dd>
+				        </dl></div></li>
+							  
+				      <li>赛事<div>
+				        <dl>
+				<dd>123</dd>
+				      </dl></div></li>
+					  
+				    <li>BML<div>
+				      <dl>
+				        <dd>123</dd>
+				      </dl></div></li>
+					  
+				    <li><i></i>下载APP<div>
+				      <dl>
+				        <dd>123</dd>
+				      </dl></div></li>
+					  
+				   
+				  </ul>
+				
+				
+				</div>
+				<div class="user">
+				  <ul>
+					<li class="userh"></li>
+				    <li>大会员</li>
+				    <li>消息</li>
+				    <li>动态</li>
+				    <li>稍后再看</li>
+				    <li>收藏</li>
+				    <li>历史</li>
+					<li>创作中心</li>
+					<li class="contribute"><a href="#">投稿</a></li>
+				  </ul>
+				</div>
+		</div>
+		<div class="shuffling-nav">
+			<div class="shuffling"> 
+				<div class="shadow-l">
+					<div>&lt;</div>
+				</div>
+				<div class="shadow-r">
+					<div>&gt;</div>
+				</div>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<script>
+				window.onload = function(){
+				var d1 = document.querySelector('.shuffling').querySelectorAll('li');
+				var u = document.querySelector('.shuffling').querySelector('ul');
+				var lc = document.querySelector('.shadow-l').querySelector('div');
+				var rc = document.querySelector('.shadow-r').querySelector('div');
+				var timer = null;
+				var index = 3;
+				d1[0].style = "background-image: url(\'../img3/h_shuffling" + 2 + ".jpg\');";
+				d1[1].style = "background-image: url(\'../img3/h_shuffling" + 3 + ".jpg\');";
+				d1[2].style = "background-image: url(\'../img3/h_shuffling" + 4 + ".jpg\');";
+				d1[3].style = "background-image: url(\'../img3/h_shuffling" + 1 + ".png\');";
+				d1[4].style = "background-image: url(\'../img3/h_shuffling" + 2 + ".jpg\');";
+				d1[5].style = "background-image: url(\'../img3/h_shuffling" + 3 + ".jpg\');";
+				d1[6].style = "background-image: url(\'../img3/h_shuffling" + 4 + ".jpg\');";
+				for(var i = 0;i < d1.length;i++){
+					d1[i].setAttribute('index',i);
+				}
+				
+				lc.addEventListener('mouseout',function(){
+					clearInterval(timer);
+					autoPlay(2000);
+				})
+				rc.addEventListener('mouseout',function(){
+					clearInterval(timer);
+					autoPlay(2000);
+				})
+				
+				lc.addEventListener('click',function(){
+					clearInterval(timer)
+					--index;
+					if(index == 1){
+						var timer1 = setInterval(function(){
+							u.style.transition = 'none';
+							u.style.left = -3546+'px';
+							clearInterval(timer1);
+						},1000)
+					}
+					if(index <= 0){
+						index = 5;
+					}
+					else{
+						u.style.transition = '1s';
+						show(index);
+					}
+				})
+				
+				rc.addEventListener('click',function(){
+					
+					clearInterval(timer)
+					++index;
+					if(index == 5){
+						var timer1 = setInterval(function(){
+							u.style.transition = 'none';
+							u.style.left = -506+'px';
+							clearInterval(timer1);
+						},1000)
+					}
+					if(index >= 6){
+						index = 1;
+					}
+					else{
+						u.style.transition = '1s';
+						show(index);
+					}
+				})
+				autoPlay(2000);
+				
+				function autoPlay(t) {
+				  timer = setInterval(function () {
+					++index;
+					if(index == 2){
+						u.style.transition = '1s';
+						clearInterval(timer);
+						autoPlay(2000);
+					}
+					if(index >= 6){
+						index = 1;
+						u.style.transition = 'none';
+						clearInterval(timer);
+						autoPlay(0);
+					}  
+				    show(index);
+				  },t);
+				}
+				
+				function show(x){
+					y = 254-(x*760);
+					if(y < -3700){
+						u.style.left = -506+'px';
+					}
+					else if(y > -500){
+						u.style.left = -3546+'px';
+					}
+					else{
+						u.style.left = y+'px';
+					}
+				}
+			}
+			</script>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav">
+				<ul>
+					<li>冒险</li>
+					<li>热血</li>
+					<li>搞笑</li>
+					<li>恋爱</li>
+					<li>少女</li>
+					<li>日常</li>
+					<li>校园</li>
+					<li>运动</li>
+					<li>正能量</li>
+					<li>治愈</li>
+					<li>古风</li>
+					<li>玄幻</li>
+					<li>奇幻</li>
+					<li>惊奇</li>
+					<li>全部&nbsp;&gt;</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="recomand w">
+			<div class="recomand-l">
+				<div class="recomand-l-t">漫画推荐</div>
+				<div class="recomand-l-b">
+					<ul>
+						<li><i></i><p>嫁给一个死太监</p><span>少女，古风</span></li>
+						<li><i></i><p>初恋怪兽</p><span>恋爱，日常，校园</span></li>
+						<li><i></i><p>田螺先生</p><span>恋爱，奇幻，少女</span></li>
+						<li><i></i><p>我的老婆是妲己</p><span>奇幻，搞笑，恋爱</span></li>
+						<li><i></i><p>测不准的阿波连同学</p><span>校园，治愈</span></li>
+						<li><i></i><p>休屠</p><span>冒险，热血，古风</span></li>
+						<li><i></i><p>为了让学姐鼓起干劲</p><span>日常，搞笑</span></li>
+						<li><i></i><p>今天的晚餐是山海神兽！</p><span>搞笑，冒险</span></li>
+						<li><i></i><p>花丸幼稚园</p><span>搞笑，治愈</span></li>
+						<li><i></i><p>Q弟侦探因幡</p><span>搞笑，悬疑</span></li>
+					</ul>
+				</div>
+				
+				
+			</div>
+			
+			<div class="recomand-r">
+				<div class="recomand-r-t">排行榜<span>更多&gt;</span></div>
+				<div class="recomand-r-b">
+					<ul>
+						<li><img src="../img3/comic_rank.jpg" alt="" width="130px" height="169px"><div>鬼灭之刃<p>吾垰呼世...</p><p>冒险，奇幻</p><p>更新至18...</p></div><span>1</span></li>
+						<li><span>2</span>入间同学入魔了！<i>更新至133...</i></li>
+						<li><span>3</span>BEASTARS 动物...<i>更新至154...</i></li>
+						<li><span>4</span>幽冥诡匠<i>更新至212...</i></li>
+						<li><span>5</span>一拳超人<i>更新至163...</i></li>
+						<li><span>6</span>租借女友<i>更新至117...</i></li>
+						<li><span>7</span>天官赐福<i>更新至006...</i></li>
+						<li><span>8</span>石纪元(Dr.Stone)<i>更新至130...</i></li>
+						<li><span>9</span>斗罗大陆<i>更新至238...</i></li>
+						<li><span>10</span>我的英雄学院<i>更新至250...</i></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="upt w">
+			<div class="upt-t">
+				更新表<ul>
+					<li>今天</li>
+					<li>昨天</li>
+					<li>周五</li>
+					<li>周四</li>
+					<li>周三</li>
+					<li>周二</li>
+					<li>周一</li>
+				</ul>
+			</div>
+			<div class="upt-b">
+				<ul>
+					<li><i></i><p>嗜谎之神</p><span>更新至4-065</span></li>
+					<li><i></i><p>放开那个巫女</p><span>更新至97话</span></li>
+					<li><i></i><p>尸界</p><span>更新至387话</span></li>
+					<li><i></i><p>杀手古德</p><span>更新至1623话</span></li>
+					<li><i></i><p>新开封奇谈</p><span>更新至034话</span></li>
+					<li><i></i><p>哦！我的王子殿下</p><span>更新至105话</span></li>
+					<li><i></i><p>云想之歌</p><span>更新至59话</span></li>
+					<li><i></i><p>嫁给一个死太监</p><span>更新至045话</span></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="footer-t">
+				<div><img src="../img3/b_comic.png" alt=""><span>哔哩哔哩漫画</span></div>
+				<div>
+					<ul>
+						<li>关于我们</li>
+						<li>联系我们</li>
+						<li>友情链接</li>
+						<li>加入我们</li>
+					</ul>
+				</div>
+				<div>
+					<li><img src="../img3/start.png" alt="" width="70px" height="70px"><span>B站官号</span></li>
+					<li><img src="../img3/sina.png" alt=""  width="70px" height="70px"><span>新浪微博</span></li>
+					<li><img src="../img3/donwload.png" alt=""  width="70px" height="70px"><span>下载bilibili漫画客户端</span></li>
+				</div>
+			</div>
+			<div class="footer-b">
+				<li></li>
+				<li></li>
+				<li>
+					<p>上海呵呵呵文化传播有限公司</p>
+					<p>12318 全国文化市场举报网站|上海市互联网违法和不良信息举报中心</p>
+					<p>互联网 ICP 备案：沪 ICP17039440 号 - 1 | 网络文化经营许可证：沪网文 [2017]10251-781 号 | 全国网安备案号：31011002003092</p>
+				</li>
+			</div>
+		</div>
+
+		<script>
+			var d1 = document.querySelector('.recomand-l-b').querySelectorAll('i');
+			for(var i = 0;i < d1.length;i++){
+				d1[i].style = "background-image: url(\'../img3/comic_r" + (i+1) + ".jpg\');" + "background-size: 100% 100%;"
+			}		
+		</script>
+		<script>
+			var d1 = document.querySelector('.upt-b').querySelectorAll('i');
+			for(var i = 0;i < d1.length;i++){
+				if(i==3||i==6||i==7){
+					d1[i].style = "background-image: url(\'../img3/ud" + (i+1) + ".jpg\');" + "background-size: 100% 100%;"
+					continue
+				}
+				d1[i].style = "background-image: url(\'../img3/ud" + (i+1) + ".png\');" + "background-size: 100% 100%;"
+			}		
+		</script>
+	</body>
+</html>

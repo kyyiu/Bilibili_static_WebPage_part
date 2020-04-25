@@ -1,0 +1,113 @@
+.copyright{
+			padding-top: 20px;
+			background-color: #f6f9fa; 
+		}
+		.copyright *{
+			box-sizing: border-box;
+		}
+		.copyright-t{
+			display: flex;
+			min-width: 999px;
+		}
+			
+		.copyright-t, .copyright-b{
+			width: 999px!important;
+		}
+		.copyright-t-l span, .copyright-t-m span{
+			display: inline-block;
+			color: #999;
+			margin-bottom: 10px;
+		}
+		.copyright-t-l ul , .copyright-t-m ul{
+			display: flex;
+			padding: 0;
+			list-style-type: none;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+		.copyright-t-l ul{
+			height: 65px;
+		}
+		.copyright-t-m ul{
+			height: 95px;
+		}
+		.copyright-t-l li , .copyright-t-m li{
+			margin-bottom: 10px;
+		}
+		.copyright-t-l a, .copyright-t-m a{
+			text-decoration: none;
+			font-size: 14px;
+			color: #212121;
+		}
+		.copyright-t-l,.copyright-t-m{
+			flex: 2;
+			padding-right: 40px;
+			margin-right: 40px;
+			border-right: 1px solid #eee;
+		}
+		.copyright-t-r{
+			display: flex;
+		}
+		.copyright-t-r a{
+			width: 70px;
+			padding-top: 25px;
+			text-decoration: none;
+			font-size: 14px;
+			text-align: center;
+			color: #212121;
+		}
+		.copyright-t-r i{
+			display: inline-block;
+			width: 60px;
+			height: 60px;
+			background-image: url("../img/icons.png");
+		}
+		.copyright-t-r a:first-child i{
+			background-position: -1023px -196px;
+		}
+		.copyright-t-r a:nth-child(2) i{
+			background-position: -1091px -322px;
+		}
+		.copyright-t-r a:last-child i{
+			background-position: -1023px -67px;
+		}
+		.copyright-t-b{
+			width: 999px;
+		}
+		.copyright-b-l , .copyright-b-r{
+			float: left;
+		}
+		.copyright-b .copyright-b-l{
+			width: 100px;
+			padding-top: 20px;
+			margin-right: 10px;
+		}
+		.copyright-b .copyright-b-l img:nth-child(2){
+			width: 95px;
+		}
+		.copyright-b p{
+			display: block;
+			font-size: 12px;
+			color: #999;
+			vertical-align: middle;
+			margin-bottom: 8px;
+		}
+		.copyright-b p i{
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			margin-bottom: -5px;
+			font-style: normal;
+			background-image: url("../img/hz_icons.png");
+		}
+		.copyright-b p:nth-child(3) i:first-child{
+			background-position: 0 -2px;
+		}
+		.copyright-b p:nth-child(3) i:last-child{
+			width: 18px;
+			height: 20px;
+			background-position: -41px 0;
+		}
+		.copyright-b p:nth-child(4) i{
+			background-position: -18px -3px;
+		}

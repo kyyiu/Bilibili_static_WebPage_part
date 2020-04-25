@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="../img4/shopping.ico">
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/member_shopping.css"/>
+		<title>上海·浸入式剧场体验《秘密影院：007大战皇家赌场》BILIBILI专场-bilibili会员购漫展票务</title>
+		<style type="text/css">
+			body{
+				background-color: #F4F5F7;
+			}
+			.purchase{
+				width: 1300px;
+				height: 530px;
+				background-color: #FFFFFF;
+				padding: 10px 0 0 50px;
+			}
+			.purchase div{
+				overflow: hidden;
+				font-size: 12px;
+			}
+			.purchase div span{
+				color: #99a2aa;
+			}
+			.purchase .p-o{
+				margin-top: 10px;
+			}
+			.purchase .p-o img{
+				cursor: move;
+				border-radius: 10px;
+			}
+			.purchase .p-o img, .purchase .p-o options{
+				float: left;
+			}
+			.purchase .p-o .options{
+				padding-left: 18px;
+			}
+			.purchase .p-o .options div:first-child{
+				font-size: 18px;
+			}
+			.purchase .p-o .options div:nth-child(2){
+				margin-top: 20px;
+				font-size: 14px;
+			}
+			.purchase .p-o .options div:nth-child(3){
+				margin-top: 20px;
+				font-size: 14px;
+				padding-bottom: 20px;
+				border-bottom: 1px dashed #e7ecf1;
+			}
+			.purchase .p-o .options ul{
+				padding: 0;
+				margin: 30px 0 0;
+			}
+			.purchase .p-o .options ul li {
+				float: left;
+			}
+			.purchase .p-o .options ul li:first-child{
+				font-size: 14px;
+				margin: 10px 22px 0 0;
+				color: #99a2aa;
+			}
+			.purchase .p-o .options ul li:last-child{
+				color: #f25d8e;
+				padding: 10px 25px;
+				border: 1px solid #f25d8e;
+				border-radius: 5px;
+				box-shadow: inset 0 0 0 1px #f25d8e;
+			}
+			.purchase .p-o .options .count li:last-child{
+				border: 1px solid #ccd0d7;
+				box-shadow: none;
+				padding: 0 20px;
+				color: #000000;
+			}
+			.purchase .p-o .options .count li:last-child span{
+				display: inline-block;
+				color: #f25d8e;
+				font-size: 30px
+			}
+			.purchase .p-o .options .count li:last-child span:nth-child(2){
+				color: #000000;
+				font-size: 14px;
+				margin: 10px 30px;
+			}
+			.purchase .p-o .options div:nth-child(7), .purchase .p-o .options div:last-child{
+				padding-left: 50px;
+				margin-top: 20px;
+				color: #999;
+			}
+			.purchase .p-o .options div:last-child div{
+				display: inline-block;
+				width: 240px;
+				height: 50px;
+				border: none;
+				font-size: 16px;
+				text-align: center;
+				line-height: 50px;
+				color: #FFFFFF;
+				cursor: pointer;
+				background-image: linear-gradient(-48deg,#ff6a9c,#fe8574);
+				box-shadow: 0 3px 4px 0 #fdb8cc;
+			}
+			.purchase .p-o .options div:last-child i{
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				margin: 0 20px 0 50px;
+				background-image: url("../img5/heart.png");
+				background-size: 100% 100%;
+			}
+			.message{
+				width: 1150px;
+				height: 50px;
+				margin: 10px 50px;
+				background-color: #fff;
+				box-shadow: 0 3px 3px rgba(0,0,0,.2);
+			}
+			.message ul li{
+				float: left;
+				line-height: 50px;
+				margin-right: 50px;
+			}
+			.message ul li:first-child{
+				position: relative;
+				color: #f25c8e;
+			}
+			.message ul li:first-child:after{
+				content: '';
+				position: absolute;
+				width: 30px;
+				height: 3px;
+				bottom: 0;
+				left: 2px;
+				background-color: #f25c8e;
+			}
+			.detail{
+				width: 1150px;
+				margin: 10px 50px;
+				overflow: hidden;
+			}
+			.detail-l, .detail-r{
+				float: left;
+			}
+			.detail-l-t{
+				width: 830px;
+				height: 70px;
+				padding-top: 20px;
+				background-color: #FFFFFF;
+			}
+			.detail-l-t span{
+				margin-left: 48px;
+				color: #f25c8e;
+			}
+			.detail-l-t i:first-child, .detail-l-t i:last-child{
+				display: inline-block;
+				width: 18px;
+				height: 16px;
+				margin: 0 15px;
+				background-image: url("../img5/horn.png");
+				background-size: 100% 100%;
+			}
+			.detail-l-t i:last-child{
+				width: 12px;
+				height: 12px;
+				background-image: url("../img5/point.png");
+			}
+			
+		
+			.detail-l .active{
+				width: 820px;
+				background-color: #fff;
+				margin-top: 10px;
+				padding-left: 10px;
+				overflow: hidden;
+			}
+			.detail-l .active i{
+				display: inline-block;
+				width: 18px;
+				height: 16px;
+				margin: 20px 15px 0 0;
+				background-image: url("../img5/note.png");
+				background-size: 100% 100%;
+			}
+			.detail-l .active .base, .detail-l .active .tiket, .detail-l .active .instruction, .detail-l .active .introduce{
+				width: 790px;
+				height: 30px;
+				line-height: 30px;
+				padding-left: 20px;
+				font-weight: 900;
+				background-color: #f4f4f4;
+			}
+			.detail-l .active pre{
+				font-size: 16px;
+			}
+			.detail-l .active .t-value{
+				font-size: 14px;
+				padding-left: 20px;
+			}
+			.detail-l .active .t-value span{
+				display: inline-block;
+				margin-top: 10px;
+				font-size: 12px;
+				color: #999;
+			}
+			.detail-l .active img{
+				padding-left: 4px;
+			}
+			.detail-r{
+				width: 300px;
+				height: 2250px;
+				margin-left: 20px;
+				background: #fff;
+			}
+			.detail-r i{
+				display: inline-block;
+				width: 18px;
+				height: 18px;
+				margin: 20px 15px 0;
+				background-image: url("../img5/light.png");
+				background-size: 100% 100%;
+			}
+			.detail-r p{
+				padding: 0 20px;
+				font-size: 13px;
+				line-height: 20px;
+				margin: 0;
+			}
+			.detail-r .f{
+				padding-bottom: 10px;
+			}
+			.detail-r li{
+				border-top: 10px solid #F4F5F7;
+			}
+			.detail-r img{
+				margin: 15px 15px 5px;
+			}
+			.detail-r div p:first-child{
+				padding-bottom: 10px;
+			}
+			.detail-r span{
+				display: block;
+				color: #99a2aa;
+				font-size: 12px;
+				margin-left: 20px;
+			}
+			.amplification{
+				width: 250px;
+				height: 300px;
+				background-image: url("../img4/1.jpeg");
+				background-repeat: no-repeat;
+				background-size: 230%;
+				position: absolute;
+				border-radius: 3px;
+				left: 375px;
+				top: 170px;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="user">
+			<img src="../img4/logo.png" alt="" width="130px" height="30px">
+			<li><i></i><a href="../index.html">主站</a></li>
+			<div class="search"><input type="" name="" id="" value="活动,嘉宾,场馆" /><button type="button"></button></div>
+			<div class="user-h"></div>
+			<div class="o-p"><i></i>订单中心</div>
+		</div>
+		<div class="purchase">
+			<div>Bilibili&nbsp;&gt;&nbsp;会员购&nbsp;&gt;&nbsp;<span>上海·浸入式剧场体验《秘密影院：007大战皇家赌场》BILIBILI专场</span></div>
+			<div class="p-o">
+				<img src="../img4/1.jpeg" alt="" width="25%">
+				<div class="amplification"></div>
+				<div class="options">
+					<div>上海·浸入式剧场体验《秘密影院：007大战皇家赌场》BILIBILI专场</div>
+					<div><span>时间:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2019.12.15 15:00 - 12.15 19:50</div>
+					<div><span>场馆:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>待定</div>
+					<div>
+						<ul>
+							<li>场次:</li>
+							<li>12月15日</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>价格:</li>
+							<li> ¥888(688元票价+200元储值手环)</li>
+						</ul>
+					</div>
+					<div class="count">
+						<ul>
+							<li>数量:</li>
+							<li><span>-</span><span>1</span><span>+</span></li>
+						</ul>
+					</div>
+					<div> *电子票/兑换票·无需配送&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*不支持7天无理由退票</div>
+					<div>
+						<div>立即购买</div>
+						<i></i>123人想去
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="message">
+			<ul>
+				<li>公告</li>
+				<li>活动详情</li>
+				<li>讨论</li>
+			</ul>
+		</div>
+		<div class="detail">
+			<div class="detail-l">
+				<div class="detail-l-t">
+					<i></i>公告<br/><br/>
+					<span>11.11</span><i></i>重要通知，务必查看！
+				</div>
+				<div class="active">
+					<i></i>活动详情<br><br>
+					<div class="base">基础信息</div><br>
+					<pre>
+  活动日期     2019/12/15 15:00-19:50
+  
+  场馆地址     上海市 黄浦区 待定 待定
+
+  儿童说明     18岁及以下儿童禁止入场，18岁以上全价票入场
+
+  入场次数     单场票，1次入场有效
+
+  入场说明     现场凭购票二维码兑换纸质票入场（订单或订单截图无效）
+
+  退换说明     本项目不支持退换，如无法正常使用，还请自行处理，给您带来不便敬请谅解
+
+  实名制       购票时需要输入购票人身份证信息，每笔订单对应一个证件号。入场请携带有效证件（身份证、
+               通行证、护照、学生证）以备查验。
+
+  座位类型     无座位号，可随意落座
+
+  特殊说明     现场演出为中英双语，中国、英国演员各占50%。观众可自行选择互动对象。
+					</pre>
+					<div class="tiket">票种说明</div><br>
+					<div class="t-value">
+						预售票 &nbsp;&nbsp;¥888 <br>
+						<span>特别福利： 688元票价+200元储值手环</span>
+					</div><br>
+					<div class="instruction">重要说明</div><br>
+					<pre>
+  订票成功后，1-3个工作日内会收到由任务网站发出的特工code，凭特工code访问任务网站选择身份接受任务，
+  关于演出当天集合地点，着装要求都在任务网站会告知。演出当天至现场票亭出示B站订票二维码核销订单
+  换票入场。任务网站网址：https://www.universal-exports.cn
+						
+						
+						
+  购票须知：
+						
+  1.演出票一经售出不退不换。					
+  2.18岁以下禁止观演。					
+  3. 演出地点将于上海市中心某一神秘点，具体地点将在开演前通过短信告知。					
+  4. 活动会根据影片内容设定具体着装要求。活动举办方将通过在线注册系统向持票者提供具体着装要求。
+  为不影响观剧体验，希望客人始终保持得体的着装。					
+  5.本演出中所有涉及的场景及互动均为演出剧情需要安排，观众在离场时必须对演出道具进行归还，
+  所有演出设施与环节设置均不具备现实指导意义。					
+  6.为了您有良好的浸入式体验，入场后手机将无法使用，您可以使用收费手环获得流畅的入场及观演体验。
+  每张演出票将会预收取收费手环费用200元，其中包含10元工本费及190元可消费金额。现场可再次充值，
+  离场时可退款（工本费不退）
+					</pre>
+					<div class="introduce">活动介绍</div><br>
+					<img src="../img5/pic1.png" alt="">
+					<pre>
+  欢迎进入特工世界。
+					
+  你能潜伏成功吗？
+					
+  记住，不要相信任何人…
+					
+									
+  你是否幻想过，亲身活在电影世界？
+					
+						
+  成立于2007年，伦敦，Secret Cinema秘密影院在全球首次开创“浸入式电影体验”，
+  至今已吸引全球超过600，000名观众参与，其中包括卷福、荷兰弟、卡抽等一线好莱坞明星,
+  Muse、One Direction等一众潮流文化巨星。
+					</pre>
+					<img src="../img5/pic2.jpeg" alt="" width="98%">
+					<pre>
+  Tom Holland在秘密影院
+						
+						
+  什么是秘密影院？
+						
+  在秘密影院，你根本分不清谁是观众，谁是演员！
+						
+  通过在现实中还原电影场景，邀请观众Cosplay电影角色，与演员互动，甚至左右剧情，
+  秘密影院实现了万千影迷最狂热的愿望：如果能活在电影里该多好！ 
+  同时，融合多媒体、变装、Cosplay、角色扮演等元素，也成为了全球体量最大、最嗨、潮人云集的“戏精派对”。
+					</pre>
+					<img src="../img5/pic3.png" alt="" width="98%">
+					<pre>
+  《惊变28天》剧照
+						
+						
+  12年来，秘密影院已经创造了70余个秘密电影世界，
+  选片几乎覆盖了所有高分电影——《肖申克的救赎》、《红磨坊》、《银翼杀手》、《星球大战》、
+  《回到未来》、《布达佩斯大饭店》……从现实到虚拟，
+  从复古到未来世界，从僵尸围剿到异形登陆，你在现实里想不到的，秘密影院都能实现。
+					</pre>
+					<img src="../img5/pic4.png" alt="">
+				</div>
+			</div>
+			
+			<div class="detail-r">
+				<div>
+					<i></i>购票须知
+					<p class="f">
+						1、会员购在线售票为电子票或纸质票。<br>
+						2、如您购买的是电子票，入场时请在bilibili APP中【订单中心】打开电子票检票入场（部分活动需兑换实体票入场）；电子票不得转售，请在正规途径购买；电子票截图无法入场。<br>
+						3、如您购买的是纸质票，需在购票时填写准确配送信息，纸质票将在活动开始之前寄出，邮费由用户承担；因纸质票的特殊性，遗失不补且无法挂失，请您保管好购买到的票品。<br>
+						
+						4、部分活动不提供现场售票服务，请您提前购买。<br>
+						
+						5、因票品具有稀缺性和时效性的特点，一旦退货将会影响二次销售，票品均不支持七天无理由退票，请您理解并审慎购买，并非所有项目主办方都支持因个人原因发起的退票，具体请以各商品展示页说明信息为准，请您在购买前仔细阅读商品信息。<br>
+						
+						6、若所购项目主办方支持因个人原因退票，您在因个人原因退票时需支付一定比例的手续费,具体比例您可在《bilibili购票服务协议》中查询。<br>
+						
+						7、为保障您的人身安全，主办方在人流高峰可能会采取临时现场限流措施，如对您的正常观展产生影响，敬请谅解。<br>
+						
+						8、若有其他问题请联系客服：客服入口在移动端APP “我的” 个人中心，点击“我的客服”，选择“在线客服”，即可咨询。<br>
+						
+						9、《会员购服务协议》
+					</p>
+				</div>
+				<li>
+					<img src="../img5/p1.jpeg" alt="" width="90%">
+					<p>上海·弗洛朗·莫特 Florent Mothe 2019演唱会</p>
+					<span>2019.12.14-12.15</span>
+					<span>Modernsky Lab</span>
+				</li>
+				<li>
+					<img src="../img5/p2.jpeg" alt="" width="90%">
+					<p>上海·飞鸟100匠人集市1.0</p>
+					<span>2020.01.04-01.05</span>
+					<span>机遇书屋</span>
+				</li>
+				<li>
+					<img src="../img5/p3.jpeg" alt="" width="90%">
+					<p>上海·SPYAIR 2019音乐教室亚洲巡演MOMIKEN&amp;KENTA BAND TRIAL 〜ASIA TOUR</p>
+					<span>2019.12.14-12.14</span>
+					<span>万代南梦宫上海文化中心</span>
+				</li>
+				<li>
+					<img src="../img5/p4.jpeg" alt="" width="90%">
+					<p>上海·淘喵喵名猫咖啡厅【静安旗舰店】</p>
+					<span>2019.06.10-12.31</span>
+					<span>淘喵喵(静安旗舰店)</span>
+				</li>
+				<li>
+					<img src="../img5/p5.jpeg" alt="" width="90%">
+					<p>上海·地铁逃脱第二季</p>
+					<span>2019.12.01-12.29</span>
+					<span>地铁1号线汉中路</span>
+				</li>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var img = document.querySelector('.p-o').querySelector('img');
+			var dis = document.querySelector('.amplification');
+			img.addEventListener('mousemove',function(e){
+				var x = -e.offsetX;
+				var y = -e.offsetY;
+				dis.style = "display: block ;background-position: "+x+"px "+y+"px;"
+			})
+			img.addEventListener('mouseout',function(){
+				dis.style.display = 'none';
+			})
+		</script>
+	</body>
+</html>

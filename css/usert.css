@@ -1,0 +1,113 @@
+.head1{
+            width: 1280px;
+            height: 40px;
+			background: rgba(255,255,255,.5);
+            float: left;
+
+            z-index: 2;
+        }
+        .head1 .else{
+          width: 435px;
+          height: 100% ;
+          float: left;
+          margin: 0 158px 0 150px;
+        }
+        .else ul{
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          height: 100%;
+
+        }
+		
+        .else ul li{
+          height: 100%;
+          font-size: 12px;
+          font-weight: 400;
+          float: left;
+          margin-right: 17px;
+          line-height: 40px;
+          position: relative;
+        }
+		.else ul li a{
+			color: #000000;
+		}
+		.else ul li:first-child{
+			position: relative;
+		}
+		.else ul img{
+			position: absolute;
+			right: 30px;
+			top: 10px;
+		}
+		.else ul li i{
+			font-family: "icomoon";
+			font-style: normal;
+			color: #23ade5;
+		}
+        .else  ul li div{
+          width: 50px;
+          height: 40px;
+          list-style-type: none;
+          background: red;
+          right: -24px;
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+          position: relative;
+          position: absolute;
+          display: none;
+        }
+        .else  ul li div dl{
+          margin: 0;
+          padding: 0;
+          position: absolute;
+        }
+        .else  ul li div dl dd{
+          margin: 0;
+        }
+        .db{
+          display: block;
+        }
+        .head1 .user{
+          height: 100%;
+          float: left;
+        }
+        .user ul {
+          list-style-type: none;
+          margin: 0;
+          height: 100%;
+          
+        }
+        .user ul li{
+          margin-right: 12px;
+          height: 100%;
+          float: left;
+		  font-size: 12px;
+          line-height: 40px;
+        }
+		.user .userh{
+			width: 35px;
+			height: 35px;
+			background-image: url("../img/akari.jpg");
+			background-size: 35px 35px;
+			border-radius: 50%;
+			margin-top: 3px;
+		}
+		.user .contribute{
+			width: 68px;
+			height: 100%;
+			background-color: #000000;
+		}
+		.user .contribute a{
+			display: block;
+			width: 100%;
+			height: 47px;
+			background-color: #f45a8d ;
+			color: #FFFFFF;
+			font-size: 14px;
+			border-radius: 0 0 5px 5px;
+			text-decoration: none;
+			text-align: center;
+		}

@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+    /*overflow: scroll;*/
+    overflow-x: hidden;/* 隐藏水平滚动条 */
+        }
+div{
+    margin: 0;
+}
+a{
+	text-decoration: none;
+}
+ul, li{
+	list-style-type: none;
+}
+.w{
+    margin: 10px auto;
+}
+
+.w1{
+    width: 983px;
+    margin: 35px auto;
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?qpc7wi');
+  src:  url('../fonts/icomoon.eot?qpc7wi#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?qpc7wi') format('truetype'),
+    url('../fonts/icomoon.woff?qpc7wi') format('woff'),
+    url('../fonts/icomoon.svg?qpc7wi#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}

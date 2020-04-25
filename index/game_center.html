@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/usert.css">
+		<link rel="shortcut icon" href="../favicon.ico">
+		<title>bilibili游戏中心 - 只做有节操的游戏！</title>
+		<style>
+			ul{
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background-color: #FAFAFA;
+			}
+			.head1{
+				float: none;
+			}
+			.header{
+				width: 1280px;
+				height: 390px;
+				background-image: url("../img2/game_Tv.jpg");
+				background-position: -375px 0;
+				position: relative;
+			}
+			.header .g-pic1{
+				width: 1000px;
+				height: 220px;
+				top: 33px;
+				left: 123px;
+				overflow: hidden;
+				position: absolute;
+				position: relative;
+			}
+			.header .g-pic1 .g-pic1-p{
+				width: 900%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				cursor: pointer;
+				transition: 1s;
+			}
+			.header .g-pic1 li{
+				width: 1000px;
+				height: 220px;
+				float: left;
+			}
+			.g-options{
+				width: 1000px;
+				height: 110px;
+				position: absolute;
+				top: 280px;
+				left: 125px;
+				background-image: url("../img2/button-bg2.jpg");
+			}
+			.g-options ul{
+				height: 100%;
+			}
+			.g-options ul li{
+				height: 100%;
+				float: left;
+				cursor: pointer;
+				background: transparent;
+			}
+			.g-options ul li:first-child{
+				width: 332px;
+			}
+			.g-options ul li:nth-child(2), .g-options ul li:last-child{
+				margin-left: 2px;
+				width: 332px;
+			}
+			.g-options ul li:hover{
+				background: url("../img2/button-bg.jpg") repeat;
+			}
+			.g-options ul li i{
+				display: inline-block;
+				width: 200px;
+				height: 100%;
+				margin-left: 46px;
+			}
+			.g-list-h{
+				width: 1000px;
+				padding-bottom: 10px;
+				margin: 20px 125px;
+			}
+			.g-list-h div:first-child{
+				border-left: 10px solid #2CBDF0;
+				border-bottom: 2px solid #2CBDF0;
+				padding: 0 0 3px 10px;
+				color: #2CBDF0;
+				font-weight: 900;
+				float: left;
+			}
+			.g-list-h div:last-child{
+				float: right;
+			}
+			.g-list-h ul li{
+				font-size: 11px;
+				margin: 5px 10px 0 0;
+				border: 1px solid #707070;
+				border-radius: 3px;
+				padding: 1px 8px;
+				float: left;
+			}
+			.g-list-h ul li:first-child{
+				background-color: #2CBDF0;
+				border:1px solid #2CBDF0;
+				border-radius: 2px;
+				color: #FFFFFF;
+			}
+			.g-list-m{
+				width: 1050px;
+				height: 1247px;
+				margin: 50px 125px;
+			}
+			.g-list-m div{
+				width: 312px;
+				height: 100%;
+				float: left;
+				margin-right: 28px;
+			}
+			.g-list-m div ul{
+				display: flex;
+				height: 100%;
+				flex-direction: column;
+			}
+			.g-list-m div ul li{
+				flex: 1;
+				border-bottom: 1px solid #E1E1E1;
+				margin-bottom: 30px;
+				position: relative;
+				background-color: #FFFFFF;
+			}
+			.g-list-m div ul li i{
+				display: inline-block;
+				width: 100%;
+				height: 160px;
+				background-image: url("../img2/game3.jpg");
+			}
+			.g-list-m div strong, .g-list-m div p{
+				padding-left: 6px;
+			}
+			.g-list-m div p{
+				font-size: 14px;
+				font-weight: 500;
+				color: #707070;
+			}
+			.g-list-m span{
+				display: inline-block;
+				color: #2CBDF0;
+				font-size: 14px;
+				line-height: 16px;
+				padding: 2px 14px;
+				border: 1px solid #2CBDF0;
+				border-radius: 20px;
+				position: absolute;
+				bottom: 7px;
+				right: 10px;
+			}
+			.g-list-m .page {
+				height: 50px;
+				width: 1000px;
+				padding-left: 300px;
+			}
+			.g-list-m .page  div{
+				height: 20px;
+				width: 50px;
+				float: left;
+				padding: 3px 10px;
+				text-align: center;
+				color: #707070;
+				font-size: 14px;
+				border: 1px solid #707070;
+				border-radius: 3px;
+			}
+			.g-list-m .page  div:last-child{
+				width: 100px;
+				background-color: #2CBDF0;
+				color: white;
+				border: none;
+				padding: 1;
+				
+			}
+			.g-list-m .page select{
+				float: left;
+				height: 29px;
+				color: #707070;
+				margin-right: 30px;
+				border-radius: 3px;
+				border: 1px solid #707070
+			}
+			.footer{
+				height: 150px;
+				background-color: #FFFFFF;
+			}
+			.footer .pic{
+				width: 220px;
+				height: 50px;
+				padding-top: 50px;
+				margin-left: 175px;
+				float: left;
+			}
+			.footer .pic li:first-child{
+				width: 120px;
+				height: 100%;
+				list-style-type: none;
+				float: left;
+				padding-right: 10px;
+				border-right: 1px solid #0089BC;
+				background: url("../img2/bilibili.png") no-repeat;
+			}
+			.footer .pic li:last-child{
+				width: 50px;
+				height: 100%;
+				list-style-type: none;
+				float: left;
+				margin-left: 20px;
+				background-image: url("../img2/bgame_logo.png");
+				background-size: 100% 100%;
+			}
+			.statement{
+				width: 600px;
+				height: 110px;
+				margin-left: 50px;
+				float: left;
+			}
+			.statement ul{
+				height: 50px;
+			}
+			.statement li{
+				font-size: 14px;
+				padding: 30px 0 10px 0;
+				color: #0089BC;
+				float: left;
+			}
+			.statement space{
+				display: inline-block;
+				width: 2px;
+				height: 15px;
+				margin: 0 20px;
+				background-color: #0089BC;
+			}
+			.statement p{
+				line-height: 10px;
+				font-size: 11px;
+				color: #7D7D91;
+			}
+			.statement i{
+				display: inline-block;
+				width: 18px;
+				height: 18px;
+				margin-bottom: -4px;
+				background-image: url("../img/hz_icons.png");
+				background-position: -41px -20px;
+			}
+			.header .g-pic1 .g-pic1-o {
+				width: 160px;
+				height: 20px;
+				background: rgba(255,255,255,.4);
+				position: absolute;
+				bottom: 12px;
+				right: 43%;
+				border-radius: 10px;
+				padding-left: 12px;
+				box-sizing: border-box;
+			}
+			.header .g-pic1 .g-pic1-o li{
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				float: left;
+				margin-right: 6px;
+				margin-top: 4px;
+				background: #fff;
+				cursor: pointer;
+			}
+			.on{
+				background: red !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="head1">	
+				<div class="else">
+				    <ul>
+				      <li><img src="../favicon.ico" alt="ss" width="20px" height="20px"><a href="../index.html">主站</a><div>
+				        <dl>
+				          <dd>123</dd>
+				        </dl>
+							  </div></li>
+							  
+				      <li><a href="game_center.html">游戏中心</a><div>
+				        <dl>
+				          <dd>123</dd>
+				        </dl></div></li>
+							  
+				      <li>直播<div>
+				        <dl>
+				          <dd>123</dd>
+				        </dl></div></li>
+							  
+				      <li><a href="order.html">会员购</a><div>
+				        <dl>
+				          <dd>123</dd>
+				        </dl></div></li>
+							  
+				      <li><a href="comic.html">漫画</a><div>
+				        <dl>
+				          <dd>123</dd>
+				        </dl></div></li>
+							  
+				      <li>赛事<div>
+				        <dl>
+				<dd>123</dd>
+				      </dl></div></li>
+					  
+				    <li>BML<div>
+				      <dl>
+				        <dd>123</dd>
+				      </dl></div></li>
+					  
+				    <li><i></i>下载APP<div>
+				      <dl>
+				        <dd>123</dd>
+				      </dl></div></li>
+					  
+				   
+				  </ul>
+				
+				
+				</div>
+				<div class="user">
+				  <ul>
+					<li class="userh"></li>
+				    <li>大会员</li>
+				    <li>消息</li>
+				    <li>动态</li>
+				    <li>稍后再看</li>
+				    <li>收藏</li>
+				    <li>历史</li>
+					<li>创作中心</li>
+					<li class="contribute"><a href="#">投稿</a></li>
+				  </ul>
+				</div>
+		</div>
+		<div class="header">
+			<div class="g-pic1">
+				<ul class="g-pic1-p">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="g-pic1-o">
+					<li class="on"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			
+			<script>
+			window.onload = function(){
+				var u = document.querySelector('.g-pic1-p')
+				var d1 = u.querySelectorAll('li');
+				var d2 = document.querySelector('.g-pic1-o').querySelectorAll('li');
+				var timer = null;
+				var index = 1;
+				
+				for(var i = 0;i < d1.length-1;i++){
+					d1[i].style = "background-image: url(\'../img2/game-t-" + (i+1) + ".jpg\');"
+				}	
+				d1[d1.length-1].style = "background-image: url(\'../img2/game-t-" + 1 + ".jpg\');"
+				
+				
+				for(var i = 0;i < d2.length;i++){
+					d2[i].setAttribute('index',(i+1));
+					d2[i].addEventListener('click',function(){
+						var d2 = document.querySelector('.g-pic1-o').querySelectorAll('li');
+						for(var j = 0;j<d2.length;j++){
+							d2[j].className = '';
+						}
+						this.className = 'on';
+						index = this.getAttribute('index');
+						clearInterval(timer);
+						show(index);
+					})
+				}
+				
+				u.addEventListener('mouseover',function(){
+					clearInterval(timer);
+				})
+				
+				u.addEventListener('mouseout',function(){
+						clearInterval(timer);
+						autoPlay(2000);
+				})
+				
+				autoPlay(2000);
+				
+				function autoPlay(t) {
+				  timer = setInterval(function () {
+					++index;
+					if(index == 2){
+					u.style.transition = '1s';
+					clearInterval(timer);
+					autoPlay(2000);
+					}
+				   if(index > d1.length){
+					index = 1;
+					u.style.transition = 'none';
+					clearInterval(timer);
+					autoPlay(0);
+				   }
+				   
+				    show(index);
+				  },t);
+				}
+				
+				function show(x){
+					console.log(x);
+					u.style.left = -(x-1)*1000+'px';
+					for(var j = 0;j<d2.length;j++){
+						d2[j].className = '';
+					}
+					if(x-1 != 8){
+						d2[x-1].className = 'on';
+					}
+					else{
+						d2[0].className = 'on';
+					}
+				}
+				
+			}
+			</script>
+			
+			
+			
+			
+			
+			
+			<div class="g-options">
+				<ul>
+					<li><i></i></li>
+					<li><i></i></li>
+					<li><i></i></li>
+				</ul>
+			</div>
+			<script>
+				var d1 = document.querySelector('.g-options').querySelectorAll('i');
+				d1[0].style = "background-image: url('../img2/game_icons.png');" + "background-position: 26px 0;"+"background-repeat: no-repeat"
+				d1[1].style = "background-image: url('../img2/game_icons.png');" + "background-position: -175px 0;"+"background-repeat: no-repeat"
+				d1[2].style = "background-image: url('../img2/game_icons.png');" + "background-position: -592px 0;"+"background-repeat: no-repeat"
+
+				d1[0].addEventListener('mouseover',function(){
+					this.style = "background-image: url('../img2/game_icons.png');" + "background-position: 26px -110px;"+"background-repeat: no-repeat"
+				})
+				d1[1].addEventListener('mouseover',function(){
+					this.style = "background-image: url('../img2/game_icons.png');" + "background-position: -175px -110px;"+"background-repeat: no-repeat"
+				})
+				d1[2].addEventListener('mouseover',function(){
+					this.style = "background-image: url('../img2/game_icons.png');" + "background-position: -592px -110px;"+"background-repeat: no-repeat"
+				})
+				
+				d1[0].addEventListener('mouseout',function(){
+					this.style = "background-image: url('../img2/game_icons.png');" + "background-position: 26px 0px;"+"background-repeat: no-repeat"
+				})
+				d1[1].addEventListener('mouseout',function(){
+					this.style = "background-image: url('../img2/game_icons.png');" + "background-position: -175px 0px;"+"background-repeat: no-repeat"
+				})
+				d1[2].addEventListener('mouseout',function(){
+					this.style = "background-image: url('../img2/game_icons.png');" + "background-position: -592px 0px;"+"background-repeat: no-repeat"
+				})
+				
+			</script>
+		</div>	
+		<div class="g-list">
+			<div class="g-list-h">
+			<div>游戏列表</div>
+			<div>
+				<ul>
+					<li>全部</li>
+					<li>手游</li>
+					<li>页游</li>
+					<li>端游</li>
+				</ul>
+			</div>
+		</div>		
+			<div class="g-list-m">
+				<div class="d1">
+					<ul>
+						<li><i></i><strong>双生视界</strong><p>以手中之枪，逆转世界终结</p><span>进入官网</span></li>
+						<li><i></i><strong>A3!满开剧团</strong><p>满开! 绽放于舞台之上</p><span>进入官网</span></li>
+						<li><i></i><strong>重装战姬</strong><p>|机甲x少女| 末世战略手游</p><span>进入官网</span></li>
+						<li><i></i><strong>命运-冠位指定 (Fate/Go)</strong><p>在此！圣杯探索还将继续...</p><span>进入官网</span></li>
+					</ul>
+				</div >
+				
+				<div class="d2">
+					<ul>
+						<li><i></i><strong>碧蓝航线</strong><p>此身为舰，即刻出战！</p><span>进入官网</span></li>
+						<li><i></i><strong>BanG Dream!</strong><p>Ver2.8版本正式开启！</p><span>进入官网</span></li>
+						<li><i></i><strong>无法触碰的掌心</strong><p>一切从指尖相触开始！</p><span>进入官网</span></li>
+						<li><i></i><strong>时之歌</strong><p>光与暗交汇之间，你才是时间的钥匙</p><span>进入官网</span></li>
+					</ul>
+				</div>
+				
+				<div class="d3">
+					<ul>
+						<li><i></i><strong>方舟指令</strong><p>《方舟指令》x《hololive》联动开启 </p><span>进入官网</span></li>
+						<li><i></i><strong>妃十三学园</strong><p>全平台公测开启！</p><span>进入官网</span></li>
+						<li><i></i><strong>Unheard-疑案追声</strong><p>置身现场，探听真相</p><span>进入官网</span></li>
+						<li><i></i><strong>音灵</strong><p>在绝对理性的世界中，我们依赖音乐，将灵魂封存。</p><span>进入官网</span></li>
+					</ul>
+				</div>
+				<div class="page">
+						<div>上一页</div>
+					<select>
+						<option selected="selected">第一页</option>
+						<option>第二页</option>
+					</select>
+						<div>下一页</div>
+						<div>返回游戏中心</div>
+				</div>
+			</div>
+		</div>	
+		
+		<div class="footer">
+			<div class="pic">
+				<li></li>
+				<li></li>
+			</div>
+			<div class="statement">
+				<ul>
+					<li>游戏中心<space></space></li>
+					<li>账号安全<space></space></li>
+					<li>找回密码<space></space></li>
+					<li>家长监控<space></space></li>
+					<li>用户协议<space></space></li>
+					<li>隐私政策</li>
+				</ul>
+				<p>抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+				<p>上海宽娱数码科技有限公司 | COPYRIGHT © 2009-2019 BILIBILI ALL RIGHTS RESERVED.</p>
+				<p>互联网ICP备案：沪ICP备13002172号-3 沪ICP证：沪B2-20100043 | 沪网文[2016]2296-134号</p>
+				<p><i></i>沪公网安备 31011002002436 号</p>
+			</div>
+		</div>
+		<script>
+			var d1 = document.querySelector('.d1').querySelectorAll('i');
+			var d2 = document.querySelector('.d2').querySelectorAll('i');
+			var d3 = document.querySelector('.d3').querySelectorAll('i');
+			for(var i = 0;i < d1.length;i++){
+				d1[i].style = "background-image: url(\'../img2/game" + (i+1) + ".jpg\');"
+				d2[i].style = "background-image: url(\'../img2/game" + (i+5) + ".jpg\');"
+				d3[i].style = "background-image: url(\'../img2/game" + (i+9) + ".jpg\');"
+			}
+				
+		</script>
+</body>		
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<!-- 导入页面视图css -->
+    <link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/copyright.css">
+	<link rel="stylesheet" href="css/usert.css">
+	<!-- 导入网页小图标 -->
+	<link rel="shortcut icon" href="favicon.ico">
+    <title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+    <style>
+		.right-nav{
+		  width: 50px;
+		  height: 553px;
+		  background: #F6F9FA;
+		  position: absolute;
+				border: 1px solid #e5e9ef;
+		  top: 180px;
+		  left: 1140px;
+		}
+		.right-nav ul{
+				height: 100%;
+		  list-style-type: none;
+		  padding: 0;
+		  margin: 0;
+		}
+		.right-nav ul li{
+		  height: 3%;
+		  width: 100%;
+		  font-size: 12px;
+		  font-weight: 400;
+				margin: 0;
+				padding: 0;
+				text-align: center;
+		  box-sizing: border-box;
+		  margin-top: 7px;
+		}
+		.right-nav ul li:nth-child(21){
+				  height: 40px;
+				  border-top: 1px solid #e5e9ef;
+				  background: url("img/icons.png") -648px -138px no-repeat;
+		}
+		.right-nav ul li:last-child{
+				  border-top: 1px solid #e5e9ef;
+				  height: 25px;
+				  background: url("img/icons.png") -648px -82px no-repeat;
+		}
+        
+		
+		
+		
+        .head2{
+            width: 1280px;
+            height: 171px;
+            background-image: url("img/main.png");
+			background-size: 120% 100%;
+			background-position: -190px;
+            position: relative;
+        }
+		.head2 .season{
+			width: 250px;
+			height: 100px;
+			position: absolute;
+			top: 50px;
+			left: 100px;
+			background: url("img/bilibli-autumn.png") no-repeat;
+		}
+		.head2 .rank{
+			width: 69px;
+			height: 33px;
+			position: absolute;
+			left: 787px;
+			top: 115px;
+			background-color: rgba(255,255,255,0.8);
+			border-radius: 5px;
+		}
+        .head2 .rank span{
+		  display: inline-block;
+		  width: 100%;
+		  height: 100%;
+          background: url("img/icons.png") -659px -655px no-repeat;
+          padding-left: 26px;
+          box-sizing: border-box;
+          font-size: 12px;
+		  font-weight: 500;
+		  line-height: 35px;
+          color: #f25d8e;
+        }
+		.head2 .search{
+			border-radius: 5px;
+			width: 270px;
+			height: 33px;
+			position: absolute;
+			top: 115px;
+			left: 858px;
+			background: rgba(255,255,255,.8);
+			position: relative;
+		}
+        .head2 .search input{
+          width: 77%;
+		  height: 100%;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          padding-left: 5px;
+          color: red;
+		  background-color: transparent;
+		  position: absolute;
+		  left: 0;
+        }
+        .head2 input:focus,
+		.head2 .search button:focus{
+          outline: none;
+        }
+		.head2 .search button{
+			display: block;
+			width: 20%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			border: 0;
+			cursor: pointer;
+			position: absolute;
+			right: 0;
+			background: url("img/icons.png") -653px -720px;
+		}
+        .head3  {
+            width: 983px;
+            height: 33px;
+          position: relative;
+        }
+        .head3 img{
+          top: 0;
+          right: 0;
+          position: absolute;
+          float: left;
+        }
+        .head3 ul{
+          list-style-type: none;
+          width: 910px;
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+        }
+        .head3 ul li{
+          width: 5%;
+          height: 100%;
+          float: left;
+          font-size: 12px;
+		  box-sizing: border-box;
+        }
+        .head3 ul li span{
+		  display: inline-block;
+		  padding: 1px 4px;
+          height: 12px;
+		  text-align: center;
+          background: #FFAFC9;
+          border-radius: 4px;
+          font-size: 10px;
+          margin-left: 10px;
+          color: #fff;
+         
+        }
+		.head3 .home{
+			display: inline-block;
+			background: url("img/icons.png") -660px -1170px no-repeat;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: -4px;
+		}
+		.head3 .column{
+			display: inline-block;
+			background: url("img/icons.png") -87px -1814px no-repeat;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: -4px;
+		}
+		.head3 .square{
+			display: inline-block;
+			background: url("img/icons.png") -87px -2006px no-repeat;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: -4px;
+		}
+		.head3 .live{
+			display: inline-block;
+			background: url("img/icons.png") -87px -1878px no-repeat;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: -4px;
+		}
+		.head3 .prison{
+			display: inline-block;
+			background: url("img/icons.png") -87px -1942px no-repeat;
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			top: -4px;
+		}
+		.head3 li:first-child i,
+		.head3 li:last-child i,
+		.head3 li:nth-child(17) i,
+		.head3 li:nth-child(18) i,
+		.head3 li:nth-child(19) i
+		{
+			margin-top: 16px;
+		}
+
+        .head3 ul li i{
+          display: block;
+          text-align: center;
+          font-style: normal;
+        }
+        .recommand{
+            width: 983px;
+            height: 223px;
+            overflow: hidden;
+        }
+        .recommand .leftw{
+            width: 443px;
+            height: 100%;
+            background: darkgrey;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .leftw ul{
+           width: 500%;
+           height: 100%;
+           list-style-type: none;
+           padding: 0;
+           margin: 0;
+           overflow: hidden;
+           position: relative;
+         }
+        .leftw .img-1 li{
+          width: 20%;
+          height: 100%;
+          position: absolute;
+          opacity: 0;
+        }
+        .select-point1 ul{
+          width: 110px;
+          height: 20px;
+          list-style-type: none;
+          padding-left: 10px;
+          margin: 0;
+          overflow: hidden;
+          background: rgba(255,255,255,0.4);
+          float: left;
+          position: absolute;
+          border-radius: 10px;
+          bottom: 10px;
+          right: 5px;
+          z-index: 5;
+        }
+        .select-point1 ul li{
+          width: 13px;
+          height: 13px;
+          border-radius: 50%;
+          float: left;
+          margin: 4px 8px 0 0;
+          background: white;
+          cursor: pointer;
+        }
+        .current{
+		  margin-top: 0!important;
+		  width: 18px!important; 
+		  height: 19px!important;
+		  background: url("img/icons.png") -855px -726px !important;
+        }
+        .recommand .rightw{
+          width: 527px;
+          height: 100%;
+          float: left;
+          overflow: hidden;
+          margin-left: 13px;
+        }
+        .rightw ul{
+          list-style-type: none;
+          width: 550px;
+          height: 500%;
+          padding: 0;
+          margin: 0;
+        }
+        .rightw ul li{
+          width: 163px;
+          height: 101px;
+          margin: 0 19px 21px 0;
+          float: left;
+          overflow: hidden;
+          position: relative;
+        }
+        .rightw ul li i{
+          width: 100%;
+          height: 20px;
+          bottom: 0px;
+		  font-size: 12px;
+          line-height: 20px;
+          color: #fff;
+          position: absolute; 
+          bottom: 0;
+          font-style: normal;
+		  overflow: hidden;
+		  text-overflow: ellipsis;/* 规定当文本溢出时显示省略符号来代表被修剪的文本 */
+		  -webkit-line-clamp:4;/*用来限制在一个块元素显示的文本的行数,2表示最多显示2行。 为了实现该效果，它需要组合其他的WebKit属性*/
+		  display: -webkit-box; /*和-webkit-line-clamp结合使用，将对象作为弹性伸缩盒子模型显示*/
+		  -webkit-box-orient:vertical;/* 和-webkit-line-clamp结合使用 ，设置或检索伸缩盒对象的子元素的排列方式*/
+        }
+        .rightw ul li i:hover{
+		  background: rgba(0,0,0,0.3);
+          height: 100%;
+        }
+        .tuiguang{
+          height: 207px;
+          overflow: hidden;
+
+        }
+        .tuiguang .tg-t{
+          width: 100%;
+          height: 48px;
+          overflow: hidden;
+        }
+        .tuiguang .tg-b{
+          width: 100%;
+          height: 159px;
+        }
+        .tg-t-l{
+          width: 340px;
+          height: 100%;
+          float: left;
+        }
+        .tg-t-r{
+          width: 250px;
+          height: 35px;
+          float: right;
+        }
+        .tg-b{
+          overflow: hidden;
+        }
+        .tg-b span{
+          display: inline-block;
+          line-height: 10px;
+          font-weight: 400;
+          font-size: 14px;
+        }
+        .tg-b div{
+          width: 164px;
+          height: 156px;
+          float: left;
+          margin: 4px 20px 0 0;
+        }
+        .tg-b .tg-b-last{
+          width: 247px;
+          height: 155px;
+          margin-right: 0;
+        }
+        .tg-t-l i{
+			display: inline-block;
+			width: 50px;
+			height: 50px;
+			margin-top: 4px;
+			background-image: url("img/icons.png");
+			background-position: -141px -75px;
+		}
+		.tg-t-l span{
+			display: inline-block;
+			vertical-align: top;/* 把元素的顶端与行中最高元素的顶端对齐 */
+			margin-top: 4px;
+			font-size: 28px;
+		}
+		.tg-t-r{
+			background: #e5e9ef;
+			font-size: 12px;
+			text-align: center;
+			line-height: 35px;			
+			color: #6d757a;
+		}
+		.tg-b p{
+			/* 文字溢出处理 */
+			height: 50px;
+			font-size: 12px;
+			line-height: 20px;
+			overflow: hidden;
+			text-overflow: ellipsis;/* 规定当文本溢出时显示省略符号来代表被修剪的文本 */
+			-webkit-line-clamp:2;/*用来限制在一个块元素显示的文本的行数,2表示最多显示2行。 为了实现该效果，它需要组合其他的WebKit属性*/
+			display: -webkit-box; /*和-webkit-line-clamp结合使用，将对象作为弹性伸缩盒子模型显示*/
+			-webkit-box-orient:vertical;/* 和-webkit-line-clamp结合使用 ，设置或检索伸缩盒对象的子元素的排列方式*/
+		}
+		
+    </style>
+</head>
+<body>
+    <div class="right-nav">
+      <ul>
+        <li>直播</li>
+        <li>动画</li>
+        <li>番剧</li>
+        <li>国创</li>
+        <li>漫画</li>
+        <li>音乐</li>
+        <li>舞蹈</li>
+        <li>游戏</li>
+        <li>科技</li>
+        <li>数码</li>
+        <li>生活</li>
+        <li>鬼畜</li>
+        <li>时尚</li>
+        <li>广告</li>
+        <li>娱乐</li>
+        <li>专栏</li>
+        <li>电影</li>
+        <li>TV剧</li>
+        <li>影视</li>
+        <li>纪录片</li>
+		<li></li>
+		<li></li>
+      </ul>
+    </div>
+    <div class="head2">
+		<div class="season"></div>
+		<div class="head1">
+        <div class="else">
+          <ul>
+            <li><img src="favicon.ico" alt="ss" width="20px" height="20px"><a href="index.html">主站</a><div>
+              <dl>
+                <dd>123</dd>
+              </dl>
+			  </div></li>
+			  
+            <li><a href="index/game_center.html" target="_blank">游戏中心</a><div>
+              <dl>
+                <dd>123</dd>
+              </dl></div></li>
+			  
+            <li>直播<div>
+              <dl>
+                <dd>123</dd>
+              </dl></div></li>
+			  
+            <li><a href="index/order.html">会员购</a><div>
+              <dl>
+                <dd>123</dd>
+              </dl></div></li>
+			  
+            <li><a href="index/comic.html" target="_blank">漫画</a><div>
+              <dl>
+                <dd>123</dd>
+              </dl></div></li>
+			  
+            <li>赛事<div>
+              <dl>
+                <dd>123</dd>
+              </dl></div></li>
+			  
+            <li>BML<div>
+              <dl>
+                <dd>123</dd>
+              </dl></div></li>
+			  
+            <li><i></i>下载APP<div>
+              <dl>
+                <dd>123</dd>
+              </dl></div></li>
+			  
+           
+          </ul>
+
+
+        </div>
+        <div class="user">
+          <ul>
+			<li class="userh"></li>
+            <li>大会员</li>
+            <li>消息</li>
+            <li>动态</li>
+            <li>稍后再看</li>
+            <li>收藏</li>
+            <li>历史</li>
+			<li>创作中心</li>
+			<li class="contribute"><a href="#">投稿</a></li>
+          </ul>
+        </div>
+      </div>
+		
+		
+		
+		<div class="rank"><span>排行榜</span></div>
+        <div class="search"><input type="text" name="" id="" placeholder="hello"><button></button></div>
+    </div>
+
+   <!-- <script>
+        var father = document.querySelector('.else').querySelector('ul').querySelectorAll('li');
+        var son = document.querySelector('.else').querySelectorAll('div');
+        var index = 0
+        for(var i = 0;i < father.length;i++){
+          father[i].setAttribute('index', i)
+          father[i].addEventListener('mouseover',function () {
+              index = this.getAttribute('index');
+              son[index].style.display = 'block';
+          })
+          father[i].addEventListener('mouseout',function () {
+            son[index].style.display = 'none';
+          })
+
+        }
+    </script>-->
+
+    <div class="head3 w">
+      <ul>
+        <li><span class="home"></span><i>首页</i></li>
+        <li><span>999+</span><i>动画</i></li>
+        <li><span>65</span><i>番剧</i></li>
+        <li><span>85</span><i>国创</i></li>
+        <li><span>999+</span><i>音乐</i></li>
+        <li><span>424</span><i>舞蹈</i></li>
+        <li><span>999+</span><i>游戏</i></li>
+        <li><span>999+</span><i>科技</i></li>
+        <li><span>491</span><i>数码</i></li>
+        <li><span>999+</span><i>生活</i></li>
+        <li><span>41</span><i>鬼畜</i></li>
+        <li><span>700</span><i>时尚</i></li>
+        <li><span>153</span><i>广告</i></li>
+        <li><span>999+</span><i>娱乐</i></li>
+        <li><span>999+</span><i>影视</i></li>
+        <li><span>400</span><i>放映厅</i></li>
+        <li><span class="column"></span><i>专栏</i></li>
+        <li><span class="square"></span><i>广场</i></li>
+        <li><span class="live"></span><i>直播</i></li>
+        <li><span class="prison"></span><i>小黑屋</i></li>
+      </ul>
+      <img src="img/navright.gif" title="炮姐" width="70" height="33" >
+    </div>
+    <div class="recommand w">
+        <div class="leftw">
+          <ul class="img-1">
+<!--            %20是html编码中的空格-->
+            <li><img src="img/shuffling-1.jpg" alt="" width="100%" height="223px" ></li>
+            <li><img src="img/shuffling-2.jpg" alt="" width="100%" height="223px"></li>
+            <li><img src="img/shuffling-3.jpg" alt="" width="100%" height="223px"></li>
+            <li><img src="img/shuffling-4.png" alt="" width="100%" height="223px"></li>
+            <li><img src="img/shuffling-5.png" alt="" width="100%" height="223px"></li>
+          </ul>
+          <div class="select-point1">
+            <ul>
+              <li class="current"></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="rightw">
+            <ul>
+              <li><i>【刀剑神域 War of Underworld / ED】《unlasting / LiSA》翻唱【花丸晴琉/花寄女生宿舍】</i><img src="../img/1%20(6).jpg" alt="" width="100%" height="101"></li>
+                <li><i>日本动画作画精密度的巅峰——原画师冲浦启之MAD</i><img src="../img/1%20(7).jpg" alt="" width="100%" height="101"></li>
+                <li><i>『Violet』Violet Evergarden Suite by动漫长笛手Anime flutist pray for京阿尼~附乐谱连结"></i><img src="../img/1%20(8).jpg" alt="" width="100%" height="101"></li>
+                <li><i>【危机合约】解说59区废墟准15，无满级零专精</i><img src="../img/1%20(9).jpg" alt="" width="100%" height="101"></li>
+                <li><i>《明日方舟》危机合约切城中配16</i><img src="../img/1%20(10).jpg" alt="" width="100%" height="101"></li>
+                <li><i>【崩坏3/双子】两个硬币拿走拿走！</i><img src="../img/1%20(11).jpg" alt="" width="100%" height="101"></li>
+            </ul>
+        </div>
+    </div>
+	
+    <script> 
+	//轮播图
+     window.onload = function () {
+       var whellWin = document.querySelector('.recommand').querySelector('.leftw');
+       var lis = document.querySelector('.recommand').querySelector('.leftw').querySelector('.img-1').querySelectorAll('li');
+       var selects = document.querySelector('.recommand').querySelector('.leftw').querySelector('.select-point1').querySelectorAll('li');
+       var timer = null;
+       var currentNum = 0;
+       var judge = true;
+       lis[0].style.opacity =1;
+       whellWin.addEventListener('mouseout',function () {
+         clearInterval(timer);
+         autoPlay();
+       })
+       for(var i = 0;i < lis.length;i++){
+         lis[i].setAttribute('index',i);
+         selects[i].setAttribute('index',i);
+         selects[i].addEventListener('click',function () {
+           for (var j = 0;j<lis.length;j++){
+             lis[j].style.opacity = 0;
+             selects[j].className = '';
+           }
+           var index = this.getAttribute('index')
+           this.className = 'current';
+           currentNum = index;
+           clearInterval(timer);
+           show(currentNum);
+         })
+       }
+        
+       function autoPlay() {
+         timer = setInterval(function () {
+
+          if(currentNum>=lis.length-1){
+            judge = false;
+            currentNum = 4;
+          }
+           if(currentNum<=0){
+             judge = true;
+             currentNum = 0;
+           }
+           judge ? currentNum++:currentNum--;
+           show(currentNum);
+         },2000);
+       }
+
+       autoPlay();
+
+        function show(n){
+          for (var j = 0;j<lis.length;j++){
+            lis[j].style.opacity = 0;
+            selects[j].className = '';
+          }
+          selects[currentNum].className = 'current';
+         var alp = 0;
+         var timer1 = setInterval(function () {
+           alp += 2;
+           lis[n].style.opacity = alp/100;
+           alp == 100&&clearInterval(timer1);
+         },20)
+       }
+
+     }
+    </script>
+
+    <div class="tuiguang w1">
+        <div class="tg-t">
+          <div class="tg-t-l">
+			<i></i>
+			<span>推广</span>
+          </div>
+          <div class="tg-t-r">
+			在线列表
+          </div>
+        </div>
+        <div class="tg-b">
+          <div><img src="../img/1%20(13).jpg" alt="" width="100%" height="100"><p>战斗全新优化！手感丝般顺滑~</p></div>
+          <div><img src="../img/1%20(14).jpg" alt="" width="100%" height="100"><p>冰雪奇缘Elsa仿妆｜几乎崩溃的一次爆笑仿妆</p></div>
+          <div><img src="../img/1%20(15).jpg" alt="" width="100%" height="100"><p>超银河传说合集</p></div>
+          <div><img src="../img/1%20(16).jpg" alt="" width="100%" height="100"><p>一秒沉沦！三秒币没！墨染青山千古画 轻吟碧水一方天！</p></div>
+          <div class="tg-b-last"><img src="../img/1%20(17).jpg" alt="" width="100%" height="153"></div>
+        </div>
+    </div>
+	<div class="copyright">
+		<div class="copyright-t w">
+			<div class="copyright-t-l">
+				<span>bilibili</span>
+				<ul>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">加入我们</a></li>
+					<li><a href="#">友情链接</a></li>
+					<li><a href="#">bilibili认证</a></li>
+					<li><a href="#">Investor Relations</a></li>
+				</ul>
+			</div>
+			<div class="copyright-t-m">
+				<span>传送门</span>
+				<ul>
+					<li><a href="#">帮助中心</a></li>
+					<li><a href="#">高级弹幕</a></li>
+					<li><a href="#">活动专题页</a></li>
+					<li><a href="#">侵权申诉</a></li>
+					<li><a href="#">活动中心</a></li>
+					<li><a href="#">用户反馈论坛</a></li>
+					<li><a href="#">壁纸站</a></li>
+					<li><a href="#">专车号服务中心</a></li>
+					<li><a href="#">名人堂</a></li>
+				</ul>
+			</div>
+			<div class="copyright-t-r">
+				<a href="#"><i></i><p>客户端下载</p></a>
+				<a href="#"><i></i><p>新浪微博</p></a>
+				<a href="#"><i></i><p>微信下载</p></a>
+			</div>
+		</div>
+		<div class="copyright-b w">
+			<div class="copyright-b-l">
+				<img src="img/partner.png" alt="">
+				<img src="img/partner2.png" alt="">
+			</div>
+			<div class="copyright-b-r">
+				<p>广播电视节目制作经营许可证：（沪）字第1248号|网络文化经营许可证：沪网文【2016】2296-134号|信息网络传播视听节目许可证：0910417</p>
+				<p>互联网ICP备案：沪ICP备13002172号-3沪ICP证：沪B2-20100043 |违法不良信息举报邮箱：help@bilibili.com |违法不良信息举报电话：4000233233转3 | 营业执照</p>
+				<p><i></i>上海互联网举报中心 | 12318全国文化市场举报网站 | <i></i>沪公网安备31011002002436号 | 儿童色情信息举报专区</p>
+				<p>网上有害信息举报专区：<i></i>中国互联网违法和不良信息举报中心</p>
+				<p>亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。</p>
+				<p>公司名称：上海宽娱数码科技有限公司|公司地址：上海市杨浦区政立路485号|电话：021-25099888</p>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

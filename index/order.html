@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/copyright.css">
+		<link rel="stylesheet" href="../css/member_shopping.css"/>
+		<!-- 导入网页小图标 -->
+		<link rel="shortcut icon" href="../img4/shopping.ico">
+		<title>bilibili会员购</title>
+		<style type="text/css">
+			body{
+				background: #F4F5F7;
+			}
+			ul, li{
+				padding: 0;
+				list-style-type: none;
+			}
+			.adress div{ 
+				width: 1170px;
+				height: 40px;
+				padding: 0 50px; 
+				line-height: 40px;
+				font-size: 14px;
+				color: #99A2AA;
+				background: #fff;
+				border-bottom: 1px dashed #E5E9EF;
+			}
+			.adress div li{
+				margin-left: 70px;
+				float: left;
+			}
+			.adress div li:first-child{
+				margin-left: 0;
+			}
+			.adress div li:nth-child(2){
+				margin: 0 20px 0 60px;
+				color: #F45D8E;
+			}
+			.adress div:last-child{
+				box-shadow: 0 4px 14px rgba(0,0,0,.1);
+				border: none;
+			}
+			.content{
+				overflow: hidden;
+			}
+			.content-l, .content-r{
+				width: 560px;
+				height: 900px;
+				float: left;
+				margin: 30px 0 20px 50px;
+			}
+			.page {
+				height: 30px;
+				text-align: center;
+			}
+			.page ul{
+				text-align: center;
+			}
+			.page li{
+				margin-right: 40px;
+				float: left;
+				color: #212121;
+			}
+			.page li:nth-child(2){
+				color: #F27EB8;
+			}
+			.page li:first-child, .page li:last-child{
+				font-size: 25px;
+				font-weight: 900;
+				line-height: 18px;
+				color: #99A2AA;
+			}
+			.page li:first-child{
+				margin: 0 40px 0 450px;
+				color: #CFD4D8;
+			}
+			
+			.content .content-l li, .content .content-r li{
+				width: 100%;
+				height: 27%;
+				margin-top: 56px;
+				background: #fff;
+				border-radius: 5px;
+				position: relative;
+			}
+			.content .content-l i, .content .content-r i{
+				display: inline-block;
+				width: 175px;
+				height: 230px;
+				background-image: url("../img4/1.jpeg");
+				background-size: 100% 100%;
+				border-radius: 5px;
+				cursor: pointer;
+				position: absolute;
+				top: -10px;
+				left: 10px;
+				transition: 0.3s;
+			}
+			.content .content-l i:hover, .content .content-r i:hover{
+				transition: 0.3s;
+				top: -20px;
+			}
+
+			.content .content-l p, .content .content-r p{
+				display: inline-block;
+				margin: 30px 50px 0 220px;
+				font-size: 18px;
+				color: #222;
+			}
+			.content .content-l div, .content .content-r div {
+				display: flex;
+				font-size: 14px;
+				color: #999;
+				margin-left: 5px;
+				padding-left: 217px;
+				margin-top: 20px;
+				align-items: center;
+			}
+			.content .content-l div .date, .content .content-l div .position,
+			.content .content-r div .date, .content .content-r div .position{
+				display: inline-block;
+				width: 12px;
+				height: 13px;
+				background-image: url("../img4/date.png");
+				background-size: 100% 100%;
+				margin-right: 5px;
+			}
+			.content .content-l div .position, .content .content-r div .position{
+				background-image: url("../img4/position.png");
+			}
+			.content .content-l div:last-child span, .content .content-r div:last-child span{
+				color: #F25D8E;
+			}
+			.content .content-l div:last-child span:first-child, .content .content-r div:last-child span:first-child{
+				font-size: 18px;
+			}
+			.content .content-l div:last-child span:nth-child(2), .content .content-r div:last-child span:nth-child(2){
+				margin: 0 7px;
+				font-size: 28px;
+			}
+			.content .content-l div:last-child span:nth-child(3), .content .content-r div:last-child span:nth-child(3){
+				display: inline-block;
+				margin: 5px 0 0 5px;
+				font-size: 12px;
+				border: 1px solid #F25D8E;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="user">
+			<img src="../img4/logo.png" alt="" width="130px" height="30px">
+			<li><i></i><a href="../index.html">主站</a></li>
+			<div class="search"><input type="" name="" id="" value="活动,嘉宾,场馆" /><button type="button"></button></div>
+			<div class="user-h"></div>
+			<div class="o-p"><i></i>订单中心</div>
+		</div>
+		<div class="adress">
+			<div class="adress-cite">
+				<li>城市:</li>
+				<li>全国&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+				<li>上海</li>
+				<li>北京</li>
+				<li>深圳</li>
+				<li>成都</li>
+				<li>广州</li>
+				<li>武汉</li>
+				<li>重庆</li>
+				<li>南京</li>
+				<li>天津</li>
+			</div>
+			<div class="adress-type">
+				<li>类型:</li>
+				<li>全部类型</li>
+				<li>演出(468)</li>
+				<li>展览(656)</li>
+				<li>本地生活(211)</li>
+			</div>
+			<div class="adress-seise">
+				<li>筛选:</li>
+				<li>全部时间</li>
+				<li>本周&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+				<li>本月</li>
+			</div>
+		</div>
+		
+		<div class="content">
+			<div class="content-l">
+				<li>
+					<a href="BML.html"><i></i></a>
+					<p>上海·浸入式剧场体验《秘密影院：007大战皇家赌场》BILIBILI专场</p>
+					<div><span class="date"></span>2019.12.15 - 12.15</div>
+					<div><span class="position"></span>上海市&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;待定</div>
+					<div><span>¥</span><span>888</span><span>独家</span></div>
+				</li>
+				<li>
+					<i></i>
+					<p>上海·俄罗斯亚历山大红旗歌舞团2019年巡演</p>
+					<div><span class="date"></span>2019.11.29 - 12.01</div>
+					<div><span class="position"></span>上海世博中心</div>
+					<div><span>¥</span><span>380</span>起&nbsp;&nbsp;|&nbsp;&nbsp;即将停售</div>
+				</li>
+				<li>
+					<i></i>
+					<p>上海·KOKIA星空花宴～中国音旅5th纪念with大平贵之星象仪～</p>
+					<div><span class="date"></span>2020.02.29 - 02.29</div>
+					<div><span class="position"></span>上海大宁剧院</div>
+					<div><span>¥</span><span>390</span>起</div>
+				</li>
+			</div>
+			<div class="content-r">
+				<li>
+					<i></i>
+					<p>上海·KOKIA树荫下 ～生物的音乐会～</p>
+					<div><span class="date"></span>2020.03.01 - 03.01</div>
+					<div><span class="position"></span>VasLive</div>
+					<div><span>¥</span><span>290</span>起</div>
+				</li>
+				<li>
+					<i></i>
+					<p>上海·2019电竞上海大师赛</p>
+					<div><span class="date"></span>2019.11.28 - 12.01</div>
+					<div><span class="position"></span>上海市&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海静安体育中心</div>
+					<div><span>¥</span><span>159</span>起<span>独家</span></div>
+				</li>
+				<li>
+					<i></i>
+					<p>上海·COMICUP25&nbsp;魔都同人祭</p>
+					<div><span class="date"></span>2019.12.21 - 12.22</div>
+					<div><span class="position"></span>上海市&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;上海新国积博览中心</div>
+					<div><span>¥</span><span>56</span></div>
+				</li>
+			</div>
+		
+		</div>
+		<script type="text/javascript">
+			var pics1 = document.querySelector('.content-l').querySelectorAll('i')
+			var pics2 = document.querySelector('.content-r').querySelectorAll('i')
+			for(var i = 0;i<pics1.length;i++){
+				pics1[i].style.backgroundImage = "url('../img4/"+(i+1)+".jpeg')"
+				pics2[i].style.backgroundImage = "url('../img4/"+(i+4)+".jpeg')"
+			}
+		</script>
+		<div class="page">
+			<ul>
+				<li>&lt;</li>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>...</li>
+				<li>63</li>
+				<li>&gt;</li>
+			</ul>
+		</div>
+		<div class="copyright">
+			<div class="copyright-t w">
+				<div class="copyright-t-l">
+					<span>bilibili</span>
+					<ul>
+						<li><a href="#">关于我们</a></li>
+						<li><a href="#">联系我们</a></li>
+						<li><a href="#">加入我们</a></li>
+						<li><a href="#">友情链接</a></li>
+						<li><a href="#">bilibili认证</a></li>
+						<li><a href="#">Investor Relations</a></li>
+					</ul>
+				</div>
+				<div class="copyright-t-m">
+					<span>传送门</span>
+					<ul>
+						<li><a href="#">帮助中心</a></li>
+						<li><a href="#">高级弹幕</a></li>
+						<li><a href="#">活动专题页</a></li>
+						<li><a href="#">侵权申诉</a></li>
+						<li><a href="#">活动中心</a></li>
+						<li><a href="#">用户反馈论坛</a></li>
+						<li><a href="#">壁纸站</a></li>
+						<li><a href="#">专车号服务中心</a></li>
+						<li><a href="#">名人堂</a></li>
+					</ul>
+				</div>
+				<div class="copyright-t-r">
+					<a href="#"><i></i><p>客户端下载</p></a>
+					<a href="#"><i></i><p>新浪微博</p></a>
+					<a href="#"><i></i><p>微信下载</p></a>
+				</div>
+			</div>
+			<div class="copyright-b w">
+				<div class="copyright-b-l">
+					<img src="../img/partner.png" alt="">
+					<img src="../img/partner2.png" alt="">
+				</div>
+				<div class="copyright-b-r">
+					<p>广播电视节目制作经营许可证：（沪）字第1248号|网络文化经营许可证：沪网文【2016】2296-134号|信息网络传播视听节目许可证：0910417</p>
+					<p>互联网ICP备案：沪ICP备13002172号-3沪ICP证：沪B2-20100043 |违法不良信息举报邮箱：help@bilibili.com |违法不良信息举报电话：4000233233转3 | 营业执照</p>
+					<p><i></i>上海互联网举报中心 | 12318全国文化市场举报网站 | <i></i>沪公网安备31011002002436号 | 儿童色情信息举报专区</p>
+					<p>网上有害信息举报专区：<i></i>中国互联网违法和不良信息举报中心</p>
+					<p>亲爱的市民朋友，上海警方反诈劝阻电话“962110”系专门针对避免您财产被骗受损而设，请您一旦收到来电，立即接听。</p>
+					<p>公司名称：上海宽娱数码科技有限公司|公司地址：上海市杨浦区政立路485号|电话：021-25099888</p>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+</html>
